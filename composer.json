@@ -4,7 +4,7 @@
     "version": "master",
     "autoload": {
         "psr-0" : {
-            "IlCleme\\" : "src"
+            "IlCleme\\" : "src/IlCleme"
         }
     },
     "authors": [
@@ -12,5 +12,6 @@
             "name": "Mattia Clementi",
             "email": "ilcleme@gmail.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev"
 }
