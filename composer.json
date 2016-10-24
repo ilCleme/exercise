@@ -1,13 +1,12 @@
 {
     "name": "ilcleme/workup_exercise",
-    "version": "0.0.1",
     "description": "Soluzione agli esercizi",
-    "repositories": [
-        {
-            "type": "git",
-            "url":  "https://github.com/ilCleme/exercise.git"
+    "version": "master",
+    "autoload": {
+        "psr-0" : {
+            "IlCleme\\" : "src"
         }
-    ],
+    },
     "authors": [
         {
             "name": "Mattia Clementi",
