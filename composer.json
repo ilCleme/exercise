@@ -12,7 +12,5 @@
             "name": "Mattia Clementi",
             "email": "ilcleme@gmail.com"
         }
-    ],
-    "minimum-stability": "stable",
-    "require": {}
+    ]
 }
