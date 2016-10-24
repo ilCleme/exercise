@@ -1,5 +1,6 @@
 {
     "name": "ilcleme/workup_exercise",
+    "version": "0.0.1",
     "description": "Soluzione agli esercizi",
     "authors": [
         {
@@ -7,5 +8,6 @@
             "email": "ilcleme@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }
