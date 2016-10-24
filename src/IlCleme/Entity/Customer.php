@@ -17,9 +17,13 @@ class Customer implements CustomerInterface {
   /** @var  $orders Order[]|array[] Contain an array of Order related with costumer */
   private $orders;
 
-  public function __construct()
+  /** @var  $name string Name of Customers */
+  private $name;
+
+  public function __construct($name)
   {
 	$this->orders = array();
+    $this->name = $name;
   }
 
   /**
@@ -28,6 +32,21 @@ class Customer implements CustomerInterface {
   public function getOrders()
   {
 	return $this->orders;
+  }
+
+  public function addOrders(Order $order)
+  {
+    $this->orders[] = $order;
+  }
+
+  public function getName()
+  {
+    return $this->name;
+  }
+
+  public function setName($name)
+  {
+    $this->name = $name;
   }
 
 }
