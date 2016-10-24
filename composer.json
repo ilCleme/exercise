@@ -3,7 +3,7 @@
     "description": "Soluzione agli esercizi",
     "version": "master",
     "autoload": {
-        "psr-0" : {
+        "psr-4" : {
             "IlCleme\\" : "src/IlCleme"
         }
     },
