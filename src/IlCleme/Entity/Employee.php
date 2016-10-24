@@ -32,7 +32,7 @@ class Employee implements EmployeeInterface{
   public function __construct(array $costumers, $nameType = '')
   {
 	$this->type = new EmployeeType($nameType);
-	$this->costumers = $costumers;
+	$this->customers = $costumers;
   }
 
   /**
