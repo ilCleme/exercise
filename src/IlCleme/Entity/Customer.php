@@ -34,16 +34,31 @@ class Customer implements CustomerInterface {
 	return $this->orders;
   }
 
+  /**
+   * Add a order
+   *
+   * @param \IlCleme\Entity\Order $order
+   */
   public function addOrders(Order $order)
   {
     $this->orders[] = $order;
   }
 
+  /**
+   * Get the name of this Customer
+   *
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
 
+  /**
+   * Set name to this Customer
+   *
+   * @param $name
+   */
   public function setName($name)
   {
     $this->name = $name;
