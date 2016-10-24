@@ -1,0 +1,11 @@
+{
+    "name": "ilcleme/workup_exercise",
+    "description": "Soluzione agli esercizi",
+    "authors": [
+        {
+            "name": "Mattia Clementi",
+            "email": "ilcleme@gmail.com"
+        }
+    ],
+    "require": {}
+}
