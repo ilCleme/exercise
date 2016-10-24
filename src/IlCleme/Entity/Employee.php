@@ -25,10 +25,12 @@ class Employee implements EmployeeInterface{
    * Constructor
    *
    * Inizialize the basic property of Employee objects
+   *
+   * @param string $nameType String identify the type of Employee
    */
-  public function __construct()
+  public function __construct($nameType = '')
   {
-	$this->type = new EmployeeType();
+	$this->type = new EmployeeType($nameType);
 	$this->costumers = array();
   }
 

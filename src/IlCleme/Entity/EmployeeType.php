@@ -15,6 +15,13 @@ class EmployeeType {
   /** @var  $type string A string that describe a employee role */
   private $type = NULL;
 
+  /**
+   * Constructor of EmployeeType
+   *
+   * Set type property equal to string passed as argument. By default set this property to 'Sales'.
+   *
+   * @param string $type
+   */
   public function __construct($type = 'Sales')
   {
 	$this->type = $type;
