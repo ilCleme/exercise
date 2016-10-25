@@ -3,16 +3,14 @@
 namespace IlCleme\Entity;
 
 /**
- * Class Order
+ * Class Order.
  *
  * Define the structure of a Order. Based on implementation of getTotal method
  * in Revenue class.
- *
- * @package IlCleme\Entity
  */
-class Order {
-
-  /** @var array $data This variable contains any data of objects */
+class Order
+{
+    /** @var array $data This variable contains any data of objects */
   private $data = array();
 
   /** @var array $product Contain the list of product in this single order */
@@ -22,7 +20,7 @@ class Order {
   protected $price = 10;
 
   /**
-   * Constructor of Order objects
+   * Constructor of Order objects.
    *
    * Set public property total as a Closure that calculate the amount of this order.
    *
@@ -30,8 +28,8 @@ class Order {
    */
   public function __construct(array $products, $total)
   {
-    $this->products = $products;
-    $this->total = $total;
+      $this->products = $products;
+      $this->total = $total;
   }
 
   /**
@@ -40,7 +38,7 @@ class Order {
    */
   public function __set($name, $value)
   {
-    $this->data[$name] = $value;
+      $this->data[$name] = $value;
   }
 
   /**
@@ -48,10 +46,10 @@ class Order {
    */
   public function __get($name)
   {
-    if (!isset($this->data[$name])) {
-      throw new \OutOfRangeException('Invalid name given');
-    }
-    return $this->data[$name];
-  }
+      if (!isset($this->data[$name])) {
+          throw new \OutOfRangeException('Invalid name given');
+      }
 
+      return $this->data[$name];
+  }
 }

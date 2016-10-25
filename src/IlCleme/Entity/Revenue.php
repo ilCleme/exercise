@@ -11,17 +11,15 @@
  * Installa un pacchetto composer di tua scelta ed utilizzalo all'interno di una delle classi.
  * Usa Traits, Closures, Magic Methods.
  */
-
 namespace IlCleme\Entity;
-
-use IlCleme\Entity\Employee;
 
 class Revenue
 {
-	/**
-	 * @param Employee[]|array $employees
-	 * @return int
-	 */
+    /**
+     * @param Employee[]|array $employees
+     *
+     * @return int
+     */
     public function getTotal($employees = [])
     {
         $totalRevenue = 0;
@@ -42,22 +40,22 @@ class Revenue
             }
         }*/
 
-	  	while (list($var, $employee) = each($employees)){
-			$employeeType = $employee->getType();
-			if ($employeeType == 'Sales') {
-				$customers = $employee->getCustomers();
-			  	while (list($var, $customer) = each($customers)){
-					$customerTotalSales = 0;
+        while (list($var, $employee) = each($employees)) {
+            $employeeType = $employee->getType();
+            if ($employeeType == 'Sales') {
+                $customers = $employee->getCustomers();
+                while (list($var, $customer) = each($customers)) {
+                    $customerTotalSales = 0;
                     $orders = $customer->getOrders();
-				  	while (list($var, $order) = each($orders)){
-						$customerTotalSales += $order->total;
-					}
-					if ($customerTotalSales >= $minSales) {
-						$totalRevenue += $customerTotalSales;
-					}
-				}
-			}
-		}
+                    while (list($var, $order) = each($orders)) {
+                        $customerTotalSales += $order->total;
+                    }
+                    if ($customerTotalSales >= $minSales) {
+                        $totalRevenue += $customerTotalSales;
+                    }
+                }
+            }
+        }
 
         return $totalRevenue;
     }
