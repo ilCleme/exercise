@@ -15,6 +15,7 @@ Riscrivi il metodo getTotal della classe Revenue senza utilizzare cicli foreach.
 Crea un pacchetto con composer utilizzando le classi create.
 
 ** BONUS **
+
 Implementa almeno un design pattern che ritieni possa essere applicato.
 Installa un pacchetto composer di tua scelta ed utilizzalo all'interno di una delle classi.
 Usa Traits, Closures, Magic Methods.
