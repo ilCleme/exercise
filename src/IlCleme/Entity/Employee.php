@@ -3,7 +3,7 @@
 namespace IlCleme\Entity;
 
 use IlCleme\Interfaces\EmployeeInterface;
-
+use IlCleme\Entity\EmployeeType;
 /**
  * Class Employee.
  *
@@ -23,16 +23,12 @@ class Employee implements EmployeeInterface
    * Inizialize the basic property of Employee objects
    *
    * @param array $costumers array of Customers
-   * @param string $nameType String identify the type of Employee
+   * @param EmployeeType $employeeType Object identify the type of Employee
    */
-  public function __construct(array $costumers = [], $nameType = '')
+  public function __construct(EmployeeType $employeeType, array $costumers = [])
   {
-      if (!empty($nameType)) {
-          $this->type = new EmployeeType($nameType);
-      } else {
-          $this->type = new EmployeeType();
-      }
 
+      $this->type = $employeeType;
       $this->customers = $costumers;
   }
 
