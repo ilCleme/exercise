@@ -31,7 +31,12 @@ class Employee implements EmployeeInterface{
    */
   public function __construct(array $costumers = [], $nameType = '')
   {
-	$this->type = new EmployeeType($nameType);
+    if(!empty($nameType)){
+      $this->type = new EmployeeType($nameType);
+    } else {
+      $this->type = new EmployeeType();
+    }
+
 	$this->customers = $costumers;
   }
 
