@@ -12,8 +12,8 @@ namespace IlCleme\Entity;
  */
 class Order {
 
-  /** @var  $total int Contain total revenue of this order */
-  public $total;
+  /** @var array $data This variable contains any data of objects */
+  private $data = array();
 
   /** @var array $product Contain the list of product in this single order */
   protected $products = array();
@@ -28,16 +28,30 @@ class Order {
    *
    * @param array $products List of products connect with order
    */
-  public function __construct(array $products)
+  public function __construct(array $products, $total)
   {
     $this->products = $products;
-    $this->total = function(){
-      $totalPrice = 0;
+    $this->total = $total;
+  }
 
-      $totalPrice += $this->price * count($this->products);
+  /**
+   * @param string $name
+   * @param string  $value
+   */
+  public function __set($name, $value)
+  {
+    $this->data[$name] = $value;
+  }
 
-      return $totalPrice;
-    };
+  /**
+   * @param string $name
+   */
+  public function __get($name)
+  {
+    if (!isset($this->data[$name])) {
+      throw new \OutOfRangeException('Invalid name given');
+    }
+    return $this->data[$name];
   }
 
 }
