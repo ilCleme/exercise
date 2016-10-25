@@ -48,7 +48,8 @@ class Revenue
 				$customers = $employee->getCustomers();
 			  	while (list($var, $customer) = each($customers)){
 					$customerTotalSales = 0;
-				  	while (list($var, $order) = each($customer->getOrders())){
+                    $orders = $customer->getOrders();
+				  	while (list($var, $order) = each($orders)){
 						$customerTotalSales += $order->total;
 					}
 					if ($customerTotalSales >= $minSales) {
