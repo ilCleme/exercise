@@ -1,9 +1,13 @@
 ##Utilizzo
 
-Essendo a disposizione tramite packagist questa repo è possibile installarla semplicemente cosi:
+Per installare la repo è sufficiente
 ```
 composer require ilcleme/exercise
 ```
+
+l'unico vincolo è la minimum-stability da settare a dev.
+
+
 ##Obiettivi
 
 Eseguire l'esercizio proposto. Di seguito le richieste.
@@ -19,3 +23,6 @@ Crea un pacchetto con composer utilizzando le classi create.
 Implementa almeno un design pattern che ritieni possa essere applicato.
 Installa un pacchetto composer di tua scelta ed utilizzalo all'interno di una delle classi.
 Usa Traits, Closures, Magic Methods.
+
+
+##
