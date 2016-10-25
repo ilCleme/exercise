@@ -12,39 +12,39 @@ use IlCleme\Entity\EmployeeType;
 class Employee implements EmployeeInterface
 {
     /** @var EmployeeType Should contain a description of Type */
-  private $type;
+    private $type;
 
-  /** @var Customer[]|array[] Should contain an array of Customers */
-  private $customers;
+    /** @var Customer[]|array[] Should contain an array of Customers */
+    private $customers;
 
-  /**
-   * Constructor.
-   *
-   * Inizialize the basic property of Employee objects
-   *
-   * @param array $costumers array of Customers
-   * @param EmployeeType $employeeType Object identify the type of Employee
-   */
-  public function __construct(EmployeeType $employeeType, array $costumers = [])
-  {
+    /**
+    * Constructor.
+    *
+    * Inizialize the basic property of Employee objects
+    *
+    * @param array $costumers array of Customers
+    * @param EmployeeType $employeeType Object identify the type of Employee
+    */
+    public function __construct(EmployeeType $employeeType, array $costumers = [])
+    {
 
       $this->type = $employeeType;
       $this->customers = $costumers;
-  }
+    }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function getType()
-  {
+    /**
+    * {@inheritdoc}
+    */
+    public function getType()
+    {
       return $this->type->getType();
-  }
+    }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function getCustomers()
-  {
+    /**
+    * {@inheritdoc}
+    */
+    public function getCustomers()
+    {
       return $this->customers;
-  }
+    }
 }

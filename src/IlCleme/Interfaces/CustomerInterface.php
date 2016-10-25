@@ -16,11 +16,11 @@ namespace IlCleme\Interfaces;
 interface CustomerInterface
 {
     /**
-   * Return the order of customer.
-   *
-   * Retrive the array of order that are connect with Customer objects
-   *
-   * @return \array[]|\IlCleme\Entity\Order[]
-   */
-  public function getOrders();
+    * Return the order of customer.
+    *
+    * Retrive the array of order that are connect with Customer objects
+    *
+    * @return \array[]|\IlCleme\Entity\Order[]
+    */
+    public function getOrders();
 }

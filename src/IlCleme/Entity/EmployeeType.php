@@ -22,7 +22,7 @@ class EmployeeType
     */
     public function __construct($type = 'Sales')
     {
-      $this->type = $type;
+        $this->type = $type;
     }
 
     /**
@@ -32,6 +32,6 @@ class EmployeeType
     */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 }
