@@ -27,6 +27,6 @@ Usa Traits, Closures, Magic Methods.
 
 ##Note
 
-Per quanto riguarda l'uso di un design pattern, ho scelto di applicare un Pattern Strutturale piuttosto che di altri 
+Per quanto riguarda l'uso di un design pattern, ho scelto di applicare un Pattern Strutturale (Dependency Injection) piuttosto che di altri 
 tipi in quanto al momento l'implementazione risulta di base e non trovo motivi per applicare dei patter relativi alla 
 Creazione oppure al comportamento degli oggetti come per esempio un Factory o uno Strategy.
