@@ -61,6 +61,12 @@ class Customer implements CustomerInterface
         $this->name = $name;
     }
 
+
+    /**
+     * Get Total of each order for this customer
+     * 
+     * @return int
+     */
     public function getOrdersTotal()
     {
         $total = 0;

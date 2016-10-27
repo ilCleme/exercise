@@ -48,13 +48,14 @@ class Employee implements EmployeeInterface
       return $this->customers;
     }
 
+    /**
+     * Get total of revenue from this employee if the type is equal to "Sales".
+     * Return zero if the total of order isn't over of minimum sales
+     *
+     * @param int $minSales Minimum salse quota
+     * @return int
+     */
     public function getTotalEmployeeRevenue($minSales = 75000){
-        $customerTotalSales = $this->getCustomersTotalSales($minSales);
-        return $customerTotalSales;
-    }
-
-    public function getCustomersTotalSales($minSales)
-    {
         $total = 0;
         if($this->getType() == 'Sales') {
             if (!empty($this->customers)) {

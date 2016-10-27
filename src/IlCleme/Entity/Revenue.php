@@ -24,30 +24,14 @@ class Revenue
     {
         $totalRevenue = 0;
         $minSales = 75000;
-        /*foreach ($employees as $employee) {
+
+        foreach ($employees as $employee) {
             $employeeType = $employee->getType();
             if ($employeeType == 'Sales') {
                 $customers = $employee->getCustomers();
                 foreach ($customers as $customer) {
                     $customerTotalSales = 0;
                     foreach ($customer->getOrders() as $order) {
-                        $customerTotalSales += $order->total;
-                    }
-                    if ($customerTotalSales >= $minSales) {
-                        $totalRevenue += $customerTotalSales;
-                    }
-                }
-            }
-        }*/
-
-        while (list($var, $employee) = each($employees)) {
-            $employeeType = $employee->getType();
-            if ($employeeType == 'Sales') {
-                $customers = $employee->getCustomers();
-                while (list($var, $customer) = each($customers)) {
-                    $customerTotalSales = 0;
-                    $orders = $customer->getOrders();
-                    while (list($var, $order) = each($orders)) {
                         $customerTotalSales += $order->total;
                     }
                     if ($customerTotalSales >= $minSales) {
