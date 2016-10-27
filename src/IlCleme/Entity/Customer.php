@@ -60,4 +60,14 @@ class Customer implements CustomerInterface
     {
         $this->name = $name;
     }
+
+    public function getOrdersTotal()
+    {
+        $total = 0;
+        foreach($this->orders as $order){
+            $total += $order->total;
+        }
+
+        return $total;
+    }
 }

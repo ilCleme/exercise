@@ -47,4 +47,27 @@ class Employee implements EmployeeInterface
     {
       return $this->customers;
     }
+
+    public function getTotalEmployeeRevenue($minSales = 75000){
+        $customerTotalSales = $this->getCustomersTotalSales($minSales);
+        return $customerTotalSales;
+    }
+
+    public function getCustomersTotalSales($minSales)
+    {
+        $total = 0;
+        if($this->getType() == 'Sales') {
+            if (!empty($this->customers)) {
+                foreach ($this->customers as $customer) {
+                    $total += $customer->getOrdersTotal();
+                }
+
+                if ($total >= $minSales ){
+                    return $total;
+                }
+            }
+        }
+
+        return 0;
+    }
 }

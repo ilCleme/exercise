@@ -20,7 +20,7 @@ class Revenue
      *
      * @return int
      */
-    public function getTotal($employees = [])
+    public function getTotalOld($employees = [])
     {
         $totalRevenue = 0;
         $minSales = 75000;
@@ -55,6 +55,31 @@ class Revenue
                     }
                 }
             }
+        }
+
+        return $totalRevenue;
+    }
+
+    /**
+     * @param Employee[]|array $employees
+     *
+     * @return int
+     */
+    public function getTotal($employees = [], $key = 0)
+    {
+        static $totalRevenue = 0;
+        static $minSales = 75000;
+
+        $emploeeyLenght = count($employees) -1;
+
+        $customerTotalSales = $employees[$key]->getTotalEmployeeRevenue($minSales);
+        if ($customerTotalSales >= $minSales) {
+            $totalRevenue += $customerTotalSales;
+        }
+
+        if($emploeeyLenght > $key){
+            $key++;
+            $this->getTotal($employees, $key);
         }
 
         return $totalRevenue;
